@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intflow_test_task/splash.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -9,14 +10,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
           fontFamily: "Pretendard"
       ),
-      home: const Scaffold(
-        body: Center(
-          child: Text("폰트설정",style: TextStyle(fontWeight: FontWeight.w900),),
-        ),
-      ),
+      home: const SplashScreen(),
     );
   }
 }

@@ -36,7 +36,10 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_svg: ^2.0.7
-  flutter_riverpod: ^2.4.5
+  flutter_riverpod: ^2.3.2
+  table_calendar: ^3.0.9 # 캘린더 패키지
+  intl: ^0.18.0 #다국어 패키지
+
 
 dev_dependencies:
   flutter_test:

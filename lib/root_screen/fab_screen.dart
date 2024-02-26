@@ -14,7 +14,7 @@ class FabScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               const Text(
-                "문의하기",
+                "알림",
                 style: TextStyle(
                     fontSize: 12,
                     color: Colors.white,

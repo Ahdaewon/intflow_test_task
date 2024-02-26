@@ -23,10 +23,8 @@ class _SplashScreenState extends State<SplashScreen> {
     await Future.delayed(const Duration(seconds: 2));
     // delay 대신에 데이터를 가져오는 기능을 해야겠지요?? 예를 들면 로그인 데어터를 가져온다던가 등등....
 
-    Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => const RootScreen()));
-    // Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(
-    //     builder: (_) =>  const RootScreen()), (route) => false);
+    Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(
+        builder: (_) =>  const RootScreen()), (route) => false);
   }
 
   @override

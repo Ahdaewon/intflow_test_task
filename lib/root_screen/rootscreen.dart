@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intflow_test_task/common/layout/default_layout.dart';
 import 'package:intflow_test_task/root_screen/main_screen.dart';
+import 'package:intflow_test_task/root_screen/setting_screen.dart';
 
 class RootScreen extends StatefulWidget {
   final int? screenIndex ;
@@ -48,7 +49,7 @@ print(_selectedIndex);
         },
       ),
       child: TabBarView(
-        // physics: const NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         //NeverScrollableScrollPhysics(), // 좌우 스크롤 기능 잠그기
         controller: controller,
         children: _screens,
@@ -63,9 +64,7 @@ print(_selectedIndex);
       color: Colors.blue,
     ),
     const MainScreen(),
-    Container(
-      color: Colors.green,
-    ),
+   const SettingScreen(),
     Container(color: Colors.purple,),
   ];
 

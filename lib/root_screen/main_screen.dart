@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:intflow_test_task/root_screen/fab_screen.dart';
 import 'package:intflow_test_task/root_screen/rootscreen.dart';
 
+
+
 class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
+  const MainScreen({super.key});
 
   @override
-  _MainScreenState createState() => _MainScreenState();
+  State<MainScreen> createState() => _MainScreenState();
 }
-
 class _MainScreenState extends State<MainScreen> {
   bool _isOrangeContainerVisible = true;
 
@@ -24,11 +25,11 @@ class _MainScreenState extends State<MainScreen> {
           showCupertinoDialog(
               context: context,
               builder: (BuildContext context) {
-                return FabScreen(); // 올바른 카메라 촬영 방법 class
+                return const FabScreen(); // 올바른 카메라 촬영 방법 class
               });
         },
+        backgroundColor: const Color(0xFFFF6861),
         child: const Icon(Icons.add, color: Colors.white,),
-        backgroundColor: Color(0xFFFF6861),
       ),
       appBar: AppBar(
           leadingWidth: 120,
@@ -45,7 +46,7 @@ class _MainScreenState extends State<MainScreen> {
             IconButton(
               onPressed: () {
                 Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (_) => RootScreen(screenIndex: 3,)));
+                    .push(MaterialPageRoute(builder: (_) => const RootScreen(screenIndex: 3,)));
               },
               icon:_isOrangeContainerVisible
                   ? Image.asset(

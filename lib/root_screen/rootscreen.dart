@@ -3,7 +3,8 @@ import 'package:intflow_test_task/common/layout/default_layout.dart';
 import 'package:intflow_test_task/root_screen/main_screen.dart';
 
 class RootScreen extends StatefulWidget {
-  const RootScreen({super.key});
+  final int? screenIndex ;
+  const RootScreen({this.screenIndex,super.key});
 
   @override
   State<RootScreen> createState() => _RootScreenState();
@@ -11,11 +12,12 @@ class RootScreen extends StatefulWidget {
 
 class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
   late final TabController controller;
-  int _selectedIndex = 1;
+  late int _selectedIndex ;
 
   @override
   void initState() {
     super.initState();
+    _selectedIndex = (widget.screenIndex ?? 1);
     controller = TabController(length: 4, vsync: this);
     controller.animateTo(_selectedIndex);
     controller.addListener(tabListener);
@@ -33,12 +35,12 @@ class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: true,
         showUnselectedLabels: true,
-        items: btmNavItems,
-        selectedItemColor: const Color(0xFF033687),
+        items: _selectedIndex == 3 ? btmNavItems2 :  btmNavItems,
+        selectedItemColor: _selectedIndex == 3 ? const Color(0xFF303030): const Color(0xFF033687),
         unselectedItemColor: const Color(0xFF303030),
         selectedLabelStyle: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
         unselectedLabelStyle: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
-        currentIndex: _selectedIndex,
+        currentIndex: _selectedIndex != 3 ?_selectedIndex  : 0,
         onTap: (int index) {
 print(_selectedIndex);
           controller.animateTo(index);
@@ -87,6 +89,34 @@ print(_selectedIndex);
     BottomNavigationBarItem(
         activeIcon: Image.asset(
           'assets/icon/active_setting_icon.png',
+        ),
+        icon: Image.asset(
+          'assets/icon/setting_icon.png',
+        ),
+        label: "설정"),
+
+
+  ];
+  List<BottomNavigationBarItem> btmNavItems2 = [
+    BottomNavigationBarItem(
+      activeIcon: Image.asset(
+        'assets/icon/list_icon.png',
+      ),
+      icon: Image.asset(
+        'assets/icon/list_icon.png',
+      ),
+      label: "리스트",),
+    BottomNavigationBarItem(
+        activeIcon: Image.asset(
+          'assets/icon/main_icon.png',
+        ),
+        icon: Image.asset(
+          'assets/icon/main_icon.png',
+        ),
+        label: "메인"),
+    BottomNavigationBarItem(
+        activeIcon: Image.asset(
+          'assets/icon/setting_icon.png',
         ),
         icon: Image.asset(
           'assets/icon/setting_icon.png',

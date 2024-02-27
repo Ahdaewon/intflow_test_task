@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:intflow_test_task/common/calendar_textform.dart';
-import 'package:intflow_test_task/common/custom_textform.dart';
-import 'package:intflow_test_task/common/dropdown_textform.dart';
+import 'package:intflow_test_task/common/textform_layout/calendar_textform.dart';
+import 'package:intflow_test_task/common/textform_layout/custom_textform.dart';
+import 'package:intflow_test_task/common/textform_layout/dropdown_textform.dart';
 import 'package:intflow_test_task/root_screen/store_confirm.dart';
 
 class SettingScreen extends StatefulWidget {

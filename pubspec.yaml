@@ -39,7 +39,7 @@ dependencies:
   flutter_riverpod: ^2.3.2
   table_calendar: ^3.0.9 # 캘린더 패키지
   intl: ^0.18.0 #다국어 패키지
-
+  lottie: ^2.2.0
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +67,7 @@ flutter:
   assets:
     - assets/splash/
     - assets/icon/
+    - assets/lottie/
 
   fonts:
     - family: Pretendard

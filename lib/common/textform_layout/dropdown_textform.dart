@@ -48,7 +48,7 @@ class _DropDownTextFormState extends State<DropDownTextForm> {
       dropDownValue = dropDownList.first;
     }
 
-    final baseBorder = OutlineInputBorder(
+    const baseBorder = OutlineInputBorder(
       borderSide: BorderSide(color: Colors.red, width: 10),
     );
     String? formname = widget.formname;
@@ -85,12 +85,12 @@ class _DropDownTextFormState extends State<DropDownTextForm> {
             enabledBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: Color(0xFFE2E1E1), width: 0),
             ),
-            contentPadding: EdgeInsets.symmetric(horizontal: 10),
+            contentPadding: const EdgeInsets.symmetric(horizontal: 10),
             hintText: widget.hintText,
-            hintStyle: TextStyle(color: Color(0xFFE2E1E1), fontSize: 14),
+            hintStyle: const TextStyle(color: Color(0xFFE2E1E1), fontSize: 14),
             errorText: widget.errorText,
-            errorStyle: TextStyle(color: Color(0xFFFEA7AB), fontSize: 13),
-            fillColor: Color(0xFFFBFBFB),
+            errorStyle: const TextStyle(color: Color(0xFFFEA7AB), fontSize: 13),
+            fillColor: const Color(0xFFFBFBFB),
             filled: true,
             suffixIcon: DropdownButton(
               // 드롭다운 버튼에 처음 보여질 값

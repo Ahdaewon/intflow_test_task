@@ -23,7 +23,7 @@ class Calendar extends StatelessWidget {
       borderRadius: BorderRadius.circular(6.0),
       color: Colors.white,
     );
-    final defaultTextStyle = TextStyle(
+    const defaultTextStyle = TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.w700,
     );
@@ -34,7 +34,7 @@ class Calendar extends StatelessWidget {
       focusedDay: focusedDay,
       firstDay: DateTime(1800),
       lastDay: DateTime(3000),
-      headerStyle: HeaderStyle(
+      headerStyle: const HeaderStyle(
         formatButtonVisible: false, // 주버튼 삭제 : 몇주치의 일정을 보여주는지 확인 하는 버튼
         titleCentered: true, // 헤더 가운데 정돈
         titleTextStyle: TextStyle(
@@ -58,7 +58,7 @@ class Calendar extends StatelessWidget {
           selectedTextStyle: defaultTextStyle.copyWith(
             color: Colors.green,
           ), // 선택된 글자 스타일  ..... copywith : 기존 스타일을 글대로 가져오고 특정한 값만 바꾸는 기능
-          outsideDecoration: BoxDecoration(
+          outsideDecoration: const BoxDecoration(
             shape: BoxShape.rectangle,
           )),
       onDaySelected: onDaySelected,

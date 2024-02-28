@@ -31,11 +31,11 @@ class SearchTextFormField extends StatelessWidget {
         //
         cursorColor: Colors.black12,
         decoration: InputDecoration(
-          prefixIcon: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8),
+          prefixIcon: const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8),
             child: null,
           ),
-          prefixIconConstraints: BoxConstraints(minWidth: 18, minHeight: 18),
+          prefixIconConstraints: const BoxConstraints(minWidth: 18, minHeight: 18),
           isDense: true,
           fillColor: const Color(0xFFF4F4F4),
           suffixIcon: onTap == null

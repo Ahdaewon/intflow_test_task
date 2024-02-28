@@ -139,7 +139,7 @@ class _SettingScreenState extends State<SettingScreen> {
                               alramDate == null ||
                               alramDate == "")
                           ? Colors.grey
-                          : Color(0xFF0247B4),
+                          : const Color(0xFF0247B4),
                       //PRIMARY_COLOR,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),

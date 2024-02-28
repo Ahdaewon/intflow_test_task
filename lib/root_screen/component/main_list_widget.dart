@@ -23,14 +23,14 @@ class MainListContainer extends StatelessWidget {
         decoration: BoxDecoration(
 
           borderRadius:
-          BorderRadius.all(Radius.circular(13)),
+          const BorderRadius.all(Radius.circular(13)),
           color: Colors.white,
           boxShadow: [
             BoxShadow(
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 5,
               blurRadius: 7,
-              offset: Offset(0, 3), // changes position of shadow
+              offset: const Offset(0, 3), // changes position of shadow
             ),
           ],
         ),
@@ -43,8 +43,8 @@ class MainListContainer extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 8.0),
               child: Text(
-                "$bigTitle",
-                style: TextStyle(
+                bigTitle,
+                style: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w600,
                 ),
@@ -55,7 +55,7 @@ class MainListContainer extends StatelessWidget {
               padding: const EdgeInsets.only(left: 8.0),
               child: Row(
                 children: [
-                  Text(
+                  const Text(
                     '돈방',
                     style: TextStyle(
                         fontSize: 10,
@@ -65,7 +65,7 @@ class MainListContainer extends StatelessWidget {
                     " $donCount",
                     style: TextStyle(fontSize: 10),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 3,
                   ),
                   Image.asset(
@@ -73,11 +73,11 @@ class MainListContainer extends StatelessWidget {
                     height: 8,
                     color: Color(0xFFD0D0D0),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 3,
                   ),
                   Text(
-                    "$donCount",
+                    donCount,
                     style: TextStyle(fontSize: 10),
                   )
                 ],
@@ -85,7 +85,7 @@ class MainListContainer extends StatelessWidget {
             ),
             Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(13),
                   bottomRight: Radius.circular(13),
                 ),
@@ -99,7 +99,7 @@ class MainListContainer extends StatelessWidget {
                   Image.asset(
                     'assets/main_content_icon/device_icon.png',
                   ),
-                  Text("장치상태" , style: TextStyle(
+                  const Text("장치상태" , style: TextStyle(
                       fontSize: 12, fontWeight: FontWeight.w500, color: Colors.white
                   ),
                   ),SizedBox(),

@@ -143,10 +143,10 @@ class _MainScreenState extends State<MainScreen> {
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.stretch,
                                   children: [
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 10,
                                     ),
-                                    Text(
+                                    const Text(
                                       "성오 농자주님",
                                       style: TextStyle(
                                         color: Colors.white,
@@ -157,7 +157,7 @@ class _MainScreenState extends State<MainScreen> {
                                     ),
                                     Row(
                                       children: [
-                                        Text("반갑습니다",
+                                        const Text("반갑습니다",
                                             style: TextStyle(
                                               color: Colors.white,
                                               fontSize: 24,
@@ -171,7 +171,7 @@ class _MainScreenState extends State<MainScreen> {
                                     )
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 Row(
@@ -183,10 +183,10 @@ class _MainScreenState extends State<MainScreen> {
                                         Image.asset(
                                           'assets/main_content_icon/temp_icon.png',
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 10,
                                         ),
-                                        Text(
+                                        const Text(
                                           "27℃",
                                           style: TextStyle(
                                               fontSize: 14, color: Colors.white),
@@ -201,10 +201,10 @@ class _MainScreenState extends State<MainScreen> {
                                         Image.asset(
                                           'assets/main_content_icon/rain_icon.png',
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 10,
                                         ),
-                                        Text(
+                                        const Text(
                                           "87%",
                                           style: TextStyle(
                                               fontSize: 14, color: Colors.white),
@@ -219,10 +219,10 @@ class _MainScreenState extends State<MainScreen> {
                                         Image.asset(
                                           'assets/main_content_icon/co2_icon.png',
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 10,
                                         ),
-                                        Text(
+                                        const Text(
                                           "500ppm",
                                           style: TextStyle(
                                               fontSize: 14, color: Colors.white),
@@ -236,7 +236,7 @@ class _MainScreenState extends State<MainScreen> {
                           );
                         } else {
                           // 딜레이 중에 보여줄 로딩 등의 위젯
-                          return Container(
+                          return const SizedBox(
                               width: 10,
                               height: 10,
                               child: CircularProgressIndicator()); // 예시로 로딩 인디케이터
@@ -264,16 +264,16 @@ class _MainScreenState extends State<MainScreen> {
                        },
                        onChanged: (value) {},
                      ),
-                     Text(
+                     const Text(
                        "돈사 리스트",
                        style: TextStyle(
                            fontSize: 16, fontWeight: FontWeight.w600),
                        textAlign: TextAlign.left,
                      ),
-                     SizedBox(
+                     const SizedBox(
                        height: 17,
                      ),
-                     Row(
+                     const Row(
                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                        children: [
                          MainListContainer(
@@ -294,7 +294,7 @@ class _MainScreenState extends State<MainScreen> {
                          ),
                        ],
                      ),
-                     Row(
+                     const Row(
                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                        children: [
                          MainListContainer(

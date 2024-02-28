@@ -29,11 +29,11 @@ class FabScreen extends StatelessWidget {
                 ),
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => RootScreen(
+                      builder: (_) => const RootScreen(
                             screenIndex: 3,
                           )));
                 },
-                backgroundColor: Color(0xFFFF6861),
+                backgroundColor: const Color(0xFFFF6861),
                 child: Image.asset(
                   'assets/icon/alram_icon_fab.png',
                 ),

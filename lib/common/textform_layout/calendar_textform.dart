@@ -46,7 +46,7 @@ class _CalendarTextformState extends State<CalendarTextform> {
 
   @override
   Widget build(BuildContext context) {
-    final baseBorder = OutlineInputBorder(
+    const baseBorder = OutlineInputBorder(
       borderSide: BorderSide(color: Colors.red, width: 10),
     );
     String? formname = widget.formname;
@@ -92,19 +92,19 @@ class _CalendarTextformState extends State<CalendarTextform> {
                 enabledBorder: const OutlineInputBorder(
                   borderSide: BorderSide(color: Color(0xFFE2E1E1), width: 0),
                 ),
-                contentPadding: EdgeInsets.symmetric(horizontal: 10),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 10),
                 hintText: widget.hintText,
-                hintStyle: TextStyle(color: Color(0xFFE2E1E1), fontSize: 14),
+                hintStyle: const TextStyle(color: Color(0xFFE2E1E1), fontSize: 14),
                 errorText: widget.errorText,
-                errorStyle: TextStyle(color: Color(0xFFFEA7AB), fontSize: 13),
-                fillColor: Color(0xFFFBFBFB),
+                errorStyle: const TextStyle(color: Color(0xFFFEA7AB), fontSize: 13),
+                fillColor: const Color(0xFFFBFBFB),
                 filled: true,
                 suffixIcon: IconButton(
                   onPressed: () {
                     showModalBottomSheet(
                         context: context,
                         builder: (BuildContext context) {
-                          return CalendarTest();
+                          return const CalendarTest();
                         });
 
                   },
